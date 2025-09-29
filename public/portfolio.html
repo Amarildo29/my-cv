@@ -1,194 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#3674B5" />
+  <meta name="description" content="Portfolio of Amarildo Koçiaj — Chemistry professor, Python & front-end developer, translator, and video producer." />
   <title>Amarildo's Portfolio</title>
-  <link rel="stylesheet" href="../css/portfolio.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../css/portfolio.css" />
 </head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm" id="navbar">
-    <div class="container-fluid">
+
+<body data-bs-theme="light">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
+    <div class="container">
       <a class="navbar-brand fw-bold" href="#">Amarildo Koçiaj</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+
+      <div class="d-flex align-items-center order-lg-2 ms-auto">
+        <!-- Theme toggle -->
+        <button class="btn btn-sm btn-outline-secondary me-2" id="themeToggle" aria-label="Toggle dark mode">
+          <span id="themeIcon">🌙</span>
+        </button>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="../index.html">My CV</a></li>
-          <li class="nav-item"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=amarildokocia@gmail.com&su=Hello&body=Hi%20there" target="_blank">
-  Contact Me
-</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://mail.google.com/mail/?view=cm&fs=1&to=amarildokocia@gmail.com&su=Hello&body=Hi%20there" target="_blank" rel="noopener noreferrer">Contact Me</a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  
-
-  <main class="container py-5">
-    <section class="text-center mb-5">
+  <!-- HERO -->
+  <header class="container hero gradient-background shadow-sm">
+    <div class="hero-inner">
       <h1>Amarildo's Portfolio</h1>
-      <h2>Chemistry Professor | Python & Front-End Dev | Translator ENG-IT-AL | Video Producer</h2>
-      <hr>
-    </section>
+      <p>Chemistry Professor · Web Developer · ENG-IT-AL Translator · Video Producer · Graphic Designer</p>
+    </div>
+  </header>
 
-    <section id="projects" class="row g-4">
+  <!-- MAIN -->
+  <main class="container py-3">
+    <div class="section-head">
+      <h2>Featured Projects</h2>
+      <hr class="mx-auto" style="max-width:120px;opacity:.25" />
+    </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/STEM VODs.png" class="card-img-top img-fluid" alt="STEM Videos on Demand">
+    <!-- GRID -->
+    <section id="projects" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+      <!-- 1 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/STEM VODs.png" class="card-img-top" alt="STEM Videos on Demand project cover" loading="eager" decoding="async" fetchpriority="high" />
           <div class="card-body">
-            <h5 class="card-title"><a href="https://www.upwork.com/services/product/video-audio-stem-videos-on-demand-customized-educational-content-1741531386121052160?ref=project_share" target="_blank">STEM Videos on Demand: Customized Educational Content</a></h5>
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/services/product/video-audio-stem-videos-on-demand-customized-educational-content-1741531386121052160?ref=project_share" target="_blank" rel="noopener noreferrer">
+                STEM Videos on Demand: Customized Educational Content
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/ChemistryMotion.png" class="card-img-top img-fluid" alt="Chemistry in Motion">
+      <!-- 2 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/ChemistryMotion.png" class="card-img-top" alt="Chemistry in Motion project cover" loading="lazy" decoding="async" />
           <div class="card-body">
-            <h5 class="card-title"><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1917271253454426112" target="_blank">Chemistry in Motion</a></h5>
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1917271253454426112" target="_blank" rel="noopener noreferrer">
+                Chemistry in Motion
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/ChemistryCalculators.png" class="card-img-top img-fluid" alt="Interactive Chemistry Calculators">
+      <!-- 3 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/ChemistryCalculators.png" class="card-img-top" alt="Interactive Chemistry Calculators project cover" loading="lazy" decoding="async" />
           <div class="card-body">
-            <h5 class="card-title"><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1921432495426048000" target="_blank">Interactive Chemistry Calculators</a></h5>
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1921432495426048000" target="_blank" rel="noopener noreferrer">
+                Interactive Chemistry Calculators
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/Physics - Force Calculator.png" class="card-img-top img-fluid" alt="Physics - Force Calculator">
+      <!-- 4 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/Physics - Force Calculator.png" class="card-img-top" alt="Physics - Force Calculator project cover" loading="lazy" decoding="async" />
           <div class="card-body">
-            <h5 class="card-title"><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1916552607106830336" target="_blank">Physics - Force Calculator</a></h5>
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1916552607106830336" target="_blank" rel="noopener noreferrer">
+                Physics — Force Calculator
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/flashcard-game.png" class="card-img-top img-fluid" alt="Flashcard Game - Language Learning Vocabulary (ENG-IT)">
+      <!-- 5 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/flashcard-game.png" class="card-img-top" alt="Flashcard Game vocabulary trainer" loading="lazy" decoding="async" />
           <div class="card-body">
-            <h5 class="card-title"><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1914001862854184960" target="_blank">Flashcard Game - Language Learning Vocabulary (ENG-IT)</a></h5>
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1914001862854184960" target="_blank" rel="noopener noreferrer">
+                Flashcard Game — Language Learning (ENG-IT)
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/stem-images-enhancement.png" class="card-img-top img-fluid" alt="STEM Images Enhancement">
-          <div class="card-body ">
-            <h5 class="card-title "><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1788615693561544704" target="_blank">STEM Images Enhancement</a></h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/polarity-of-molecules.png" class="card-img-top img-fluid" alt="Determining Polarity of Molecules">
-          <div class="card-body ">
-            <h5 class="card-title "><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1786624810427125760" target="_blank">VODS Chemistry: Determining Polarity of Molecules</a></h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/lewis-structures.png" class="card-img-top img-fluid" alt="Lewis Structures">
-          <div class="card-body ">
-            <h5 class="card-title "><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1786624810427125760" target="_blank">VODS Chemistry: Lewis Structures</a></h5>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/reaction-mechanism.png" class="card-img-top img-fluid" alt="Explanation of Mechanisms of Organic Reactions">
-          <div class="card-body ">
-            <h5 class="card-title "><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1770843584050442240" target="_blank">Explanation of Mechanisms of Organic Reactions</a></h5>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/instagram-follower-bot.png" class="card-img-top img-fluid" alt="Instagram Follower Bot">
+      <!-- 6 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/stem-images-enhancement.png" class="card-img-top" alt="STEM Images Enhancement portfolio cover" loading="lazy" decoding="async" />
           <div class="card-body">
-            <h5 class="card-title"><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1922278286700806144" target="_blank">Instagram Follower Bot</a></h5>
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1788615693561544704" target="_blank" rel="noopener noreferrer">
+                STEM Images Enhancement
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/webscrap.png" class="card-img-top img-fluid" alt="Web Scraping Booking.com">
+      <!-- 7 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/polarity-of-molecules.png" class="card-img-top" alt="Determining Polarity of Molecules video cover" loading="lazy" decoding="async" />
           <div class="card-body">
-            <h5 class="card-title"><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1922703866517946368" target="_blank">Web Scraping Booking.com</a></h5>
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1786624810427125760" target="_blank" rel="noopener noreferrer">
+                VODS Chemistry: Determining Polarity of Molecules
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/password-manager.png" class="card-img-top img-fluid" alt="Personal Password Manager">
+      <!-- 8 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/lewis-structures.png" class="card-img-top" alt="Lewis Structures video cover" loading="lazy" decoding="async" />
           <div class="card-body">
-            <h5 class="card-title"><a href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1915862963759824896" target="_blank">Personal Password Manager</a></h5>
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1786624810427125760" target="_blank" rel="noopener noreferrer">
+                VODS Chemistry: Lewis Structures
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/Albanian-Blog.png" class="card-img-top img-fluid" alt="Albanian's Blog">
-          <div class="card-body ">
-            <h5 class="card-title "><a href="https://albanianblog.onrender.com/" target="_blank">Albanian's Blog</a></h5>
+      <!-- 9 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/reaction-mechanism.png" class="card-img-top" alt="Explanation of mechanisms of organic reactions cover" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1770843584050442240" target="_blank" rel="noopener noreferrer">
+                Explanation of Mechanisms of Organic Reactions
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-       <div class="col-md-6 col-lg-4">
-        <div class="card h-100">
-          <img src="../assets/img/portfolio/paper-rock-scissors.png" class="card-img-top img-fluid" alt="paper rock scissors game">
-          <div class="card-body ">
-            <h5 class="card-title "><a href="https://amarildo29.github.io/paper-rock-scissors" target="_blank">Paper Rock Scissors Game</a></h5>
+      <!-- 10 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/instagram-follower-bot.png" class="card-img-top" alt="Instagram Follower Bot project cover" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1922278286700806144" target="_blank" rel="noopener noreferrer">
+                Instagram Follower Bot
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
+      <!-- 11 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/webscrap.png" class="card-img-top" alt="Web Scraping Booking.com project cover" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1922703866517946368" target="_blank" rel="noopener noreferrer">
+                Web Scraping Booking.com
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
 
+      <!-- 12 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/password-manager.png" class="card-img-top" alt="Personal Password Manager app cover" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://www.upwork.com/freelancers/~011caedfbe4104ca81?p=1915862963759824896" target="_blank" rel="noopener noreferrer">
+                Personal Password Manager
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- 13 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/Albanian-Blog.png" class="card-img-top" alt="Albanian's Blog project cover" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://albanianblog.onrender.com/" target="_blank" rel="noopener noreferrer">
+                Albanian's Blog
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
+
+      <!-- 14 -->
+      <div class="col">
+        <div class="card h-100 position-relative">
+          <img src="../assets/img/portfolio/paper-rock-scissors.png" class="card-img-top" alt="Paper Rock Scissors Game cover" loading="lazy" decoding="async" />
+          <div class="card-body">
+            <h5 class="card-title">
+              <a class="stretched-link" href="https://amarildo29.github.io/paper-rock-scissors" target="_blank" rel="noopener noreferrer">
+                Paper Rock Scissors Game
+              </a>
+            </h5>
+          </div>
+        </div>
+      </div>
 
     </section>
   </main>
 
-  <footer class="bg-white text-center py-3 shadow-sm">
-    <div class="container">
-      © Amarildo Kociaj 2025
-    </div>
+  <!-- FOOTER -->
+  <footer class="text-center py-3">
+    <div class="container">© Amarildo Kociaj 2025</div>
   </footer>
 
+  <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
+    // Hide-on-scroll navbar (with threshold to avoid jitter)
     const nav = document.getElementById('navbar');
     let lastY = window.scrollY;
-
+    const threshold = 8;
     window.addEventListener('scroll', () => {
-      const currentY = window.scrollY;
-      if (currentY < lastY) {
-        // you’re scrolling up → show it
-        nav.classList.remove('hidden');
-      } else {
-        // you’re scrolling down → hide it
-        nav.classList.add('hidden');
-      }
-      lastY = currentY;
+      const y = window.scrollY;
+      if (y > lastY + threshold && y > 80) nav.classList.add('hidden');
+      else if (y < lastY - threshold) nav.classList.remove('hidden');
+      lastY = y;
+    });
+
+    // Dark mode toggle (persist in localStorage)
+    const root = document.body;
+    const btn = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      root.setAttribute('data-bs-theme', saved);
+      icon.textContent = saved === 'dark' ? '☀️' : '🌙';
+    }
+    btn.addEventListener('click', () => {
+      const next = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-bs-theme', next);
+      icon.textContent = next === 'dark' ? '☀️' : '🌙';
+      localStorage.setItem('theme', next);
     });
   </script>
-
 </body>
 </html>
