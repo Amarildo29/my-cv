@@ -900,3 +900,50 @@ section.resume-section {
   object-position: center;
   border-radius: 50%;
 }
+
+.share-page-btn {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1050;
+  width: 2.85rem;
+  height: 2.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 9999px;
+  background-color: #bd5d38;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.share-page-btn:hover {
+  transform: translateY(-2px);
+  background-color: #a24f30;
+}
+
+.share-page-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.share-page-btn.is-copied {
+  background-color: #198754;
+}
+
+.share-page-btn i {
+  pointer-events: none;
+}
+
+@media (max-width: 576px) {
+  .share-page-btn {
+    right: 0.7rem;
+    bottom: 0.7rem;
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.9rem;
+  }
+}
