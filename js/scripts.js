@@ -22,6 +22,12 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    // Set footer year dynamically
+    const currentYearEl = document.getElementById('current-year');
+    if (currentYearEl) {
+        currentYearEl.textContent = String(new Date().getFullYear());
+    }
+
     // Share the current page URL (Web Share API + clipboard fallback)
     const sharePageBtn = document.querySelector('.share-page-btn');
     if (sharePageBtn) {
