@@ -806,9 +806,7 @@ p.lead {
     display: block;
   }
 
-#sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    display: block;
-  }
+
 }
 
 .social-icons .social-icon {
@@ -868,28 +866,42 @@ section.resume-section {
 .language-switcher {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 0.45rem;
   width: 100%;
   margin-top: 0.8rem;
 }
 
 #sideNav .language-switcher .nav-link {
+  flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin: 0;
   width: 2.35rem;
   height: 2.35rem;
   padding: 0;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: 9999px;
+  opacity: 0.82;
   text-transform: none;
   letter-spacing: 0;
   line-height: 1;
+  transition: transform 0.2s ease, opacity 0.2s ease, border-color 0.2s ease;
 }
 
 #sideNav .language-switcher .nav-link:hover {
   background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+#sideNav .language-switcher .nav-link.active,
+#sideNav .language-switcher .nav-link[aria-current="page"] {
+  opacity: 1;
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
 }
 
 #sideNav .language-switcher .lang-flag {
