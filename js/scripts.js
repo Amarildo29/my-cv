@@ -1,5 +1,7 @@
 window.addEventListener('DOMContentLoaded', event => {
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {
@@ -21,6 +23,51 @@ window.addEventListener('DOMContentLoaded', event => {
             }
         });
     });
+
+    // Reading progress bar
+    const scrollProgress = document.createElement('div');
+    scrollProgress.className = 'scroll-progress';
+    document.body.appendChild(scrollProgress);
+
+    const updateScrollProgress = () => {
+        const scrollTop = window.scrollY || window.pageYOffset;
+        const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollRange > 0 ? Math.min(scrollTop / scrollRange, 1) : 0;
+        scrollProgress.style.transform = `scaleX(${progress})`;
+    };
+
+    updateScrollProgress();
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+    window.addEventListener('resize', updateScrollProgress);
+
+    // Scroll reveal animation for section content
+    if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+        const revealTargets = [];
+
+        document.querySelectorAll('.resume-section .resume-section-content').forEach((contentBlock) => {
+            Array.from(contentBlock.children).forEach((child, index) => {
+                child.classList.add('scroll-reveal');
+                child.style.setProperty('--reveal-delay', `${Math.min(index, 8) * 65}ms`);
+                revealTargets.push(child);
+            });
+        });
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -10% 0px',
+        });
+
+        revealTargets.forEach((target) => revealObserver.observe(target));
+    }
 
     // Set footer year dynamically
     const currentYearEl = document.getElementById('current-year');
