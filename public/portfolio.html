@@ -60,6 +60,20 @@
       <hr class="mx-auto" style="max-width:120px;opacity:.25" />
     </div>
 
+    <div class="portfolio-toolbar" aria-label="Project controls">
+      <div class="search-wrap">
+        <label for="projectSearch" class="visually-hidden">Search projects</label>
+        <input id="projectSearch" type="search" class="form-control" placeholder="Search projects..." />
+      </div>
+      <div class="chip-group" role="group" aria-label="Project category filters">
+        <button class="filter-chip is-active" type="button" data-filter="all">All</button>
+        <button class="filter-chip" type="button" data-filter="web">Web Apps</button>
+        <button class="filter-chip" type="button" data-filter="video">Video</button>
+        <button class="filter-chip" type="button" data-filter="automation">Automation</button>
+      </div>
+      <p id="projectCount" class="project-count mb-0" aria-live="polite"></p>
+    </div>
+
     <!-- GRID -->
     <section id="projects" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
       <!-- ⭐ -->
@@ -423,6 +437,7 @@
         </div>
       </div>
     </section>
+    <p id="noResultsMsg" class="no-results" hidden>No projects found. Try another search term.</p>
   </main>
 
   <!-- FOOTER -->
@@ -432,34 +447,7 @@
 
   <!-- SCRIPTS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Hide-on-scroll navbar (with threshold to avoid jitter)
-    const nav = document.getElementById('navbar');
-    let lastY = window.scrollY;
-    const threshold = 8;
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      if (y > lastY + threshold && y > 80) nav.classList.add('hidden');
-      else if (y < lastY - threshold) nav.classList.remove('hidden');
-      lastY = y;
-    });
-
-    // Dark mode toggle (persist in localStorage)
-    const root = document.body;
-    const btn = document.getElementById('themeToggle');
-    const icon = document.getElementById('themeIcon');
-    const saved = localStorage.getItem('theme');
-    if (saved) {
-      root.setAttribute('data-bs-theme', saved);
-      icon.textContent = saved === 'dark' ? '☀️' : '🌙';
-    }
-    btn.addEventListener('click', () => {
-      const next = root.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
-      root.setAttribute('data-bs-theme', next);
-      icon.textContent = next === 'dark' ? '☀️' : '🌙';
-      localStorage.setItem('theme', next);
-    });
-  </script>
+  <script src="../js/portfolio-effects.js"></script>
 </body>
 
 </html>
