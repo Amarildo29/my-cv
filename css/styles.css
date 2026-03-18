@@ -848,6 +848,19 @@ section.resume-section .resume-section-content {
   width: 100%;
 }
 
+.about-mobile-photo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-mobile-photo .about-mobile-profile {
+  width: clamp(7.5rem, 32vw, 9.5rem);
+  height: clamp(7.5rem, 32vw, 9.5rem);
+  object-fit: cover;
+  border: 0.4rem solid rgb(12, 144, 209, 0.7);
+}
+
 @media (min-width: 768px) {
 section.resume-section {
     min-height: 100vh;
